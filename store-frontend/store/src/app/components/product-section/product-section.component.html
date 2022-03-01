@@ -1,0 +1,30 @@
+<app-header></app-header>
+<div class="catalog-container">
+    <section>
+        <p class="section-title">{{sectionTitle}}</p>
+        <div class="item-sctn">
+            <div class="option-sctn">       
+            </div>
+            <div id="catalog" class="catalog-sctn">
+                <div class="item-card" *ngFor="let product of products_list">
+                    <div class="img-card">
+                        <img [src]="product.image_url" alt="Not found">
+                    </div>
+                    <div class="info-card">
+                        <P class="info-card-price">{{product.unit_price}}</P>
+                        <a href="http://" class="info-card-name">{{product.name}}</a>
+                        <p class="info-card-brand">{{product.brand}}</p>
+                        <p class="info-card-reference">{{product.reference}}</p>
+                        <p class="info-card-number">{{product.in_stock}}</p>
+                    </div>
+                </div>              
+            </div>
+            <div class="option-sctn">      
+            </div>
+            
+            
+        </div>
+    </section>
+    <app-footer></app-footer>
+
+</div>

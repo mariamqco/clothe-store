@@ -1,0 +1,49 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    outline: none;
+    font-family:'Courier Prime', monospace;
+}
+
+.page404-container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/assets/img/404bg5.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: start;
+}
+.page404-container .error-message-container{
+    height:100%;    
+    background-color: rgb(0, 0, 0, 0.9);       
+}
+
+.page404-container .error-message-container h1{
+    font-family:'Courier Prime', monospace;
+    font-size: 25vh;
+    color: #FFF;    
+}
+
+.page404-container .error-message-container p{    
+    font-size: 3vh;
+    color: #FFF;    
+    width: 100%;
+    text-align: center;    
+    padding: 2vw;    
+}
+
+.page404-container .error-message-container .page404-btn{
+    background-color: #000;
+    color: #FFF;
+    padding: 1vh 3vh;
+    border: #FFF 2px solid;
+    border-radius: 10px;
+}
+
+
+
+

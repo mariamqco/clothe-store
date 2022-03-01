@@ -1,0 +1,25 @@
+<div class="admin-dashboard-container">
+    <nav class="admin-dashboard-navbar center">   
+        <p>ADMIN</p>     
+        <div class="admin-img-container">
+            <img src="/assets/img/gear1.png" alt="">            
+        </div>           
+        <div class="admin-section-container center">
+            <p>Gestionar</p>
+            <ul>
+                <li><button class="admin-nv-btn" routerLink="/admin-dashboard/clients">Clientes</button></li>
+                <li><button class="admin-nv-btn" routerLink="/admin-dashboard/products" routerLinkActive="router-link-active" >Productos</button></li>
+            </ul>
+        </div>
+        <button class="admin-nv-btn" routerLink="/">Cerrar sesión</button>            
+    </nav>
+    <div class="content-container">
+        <div class="content-container-header first-z-element">
+            <div>
+                <h1>{{title}}</h1>
+                <h2>{{subtitle}}</h2>
+            </div> 
+        </div>
+               
+    </div>
+</div>

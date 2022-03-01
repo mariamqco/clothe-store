@@ -1,0 +1,87 @@
+*{
+    box-sizing: border-box;    
+    font-family: 'Courier Prime', monospace;
+    color: var(--color-a);
+}
+.admin-dashboard-container{  
+    display: flex;    
+    justify-content: flex-end;  
+}
+
+
+.admin-dashboard-navbar{
+    background-color: var(--color-d);
+    width: 20vw;
+    height: 100vh;   
+    top:0;
+    left:0;
+    justify-content: space-evenly;    
+}   
+
+.admin-dashboard-container .content-container h1{
+    font-size: 5vh;
+    width: 80vw;
+    padding: 3vh;
+    text-align: left;
+    color: var(--color-d);
+    margin-bottom: 0;       
+}
+
+.admin-dashboard-container .content-container h2{
+    font-size: 3vh;    
+    width: 80vw;
+    padding: 3vh;
+    text-align: center;
+    background-color: var(--color-d);
+}
+
+.admin-img-container{
+    width:50%;
+}
+
+.admin-img-container img{
+    width:100%;
+}
+
+.admin-dashboard-navbar .admin-section-container{
+    width: 90%;
+    text-decoration: underline;
+}
+
+.admin-dashboard-navbar ul {
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;   
+    width: 100%; 
+}
+
+.admin-dashboard-navbar ul li{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;   
+}
+
+.admin-nv-btn{
+    font-size: 2.5vh;
+    padding: 1vh;    
+    border: none;
+    background-color: var(--color-d);    
+}
+
+.admin-nv-btn:hover{
+    background-color: var(--color-c);    
+}
+
+.content-container-header{
+    background-color: var(--color-g); 
+    position: fixed;       
+}
+
+.admin-dashboard-navbar .admin-section-container .admin-nv-btn{
+    width:100%;
+}
+.admin-dashboard-navbar .admin-nv-btn{
+    width:90%;
+}

@@ -1,0 +1,71 @@
+<div class="content-container center">    
+    <div class="client-form-container">
+        <form [formGroup] = "productForm" (ngSubmit)="productFormSubmit()">
+            <div class="row">
+                <div class="col-4">
+                    <label>Nombre</label>
+                    <input type="text" formControlName="name" class="form-control">
+                    <p>
+                        <span  *ngIf="productForm.get('name')?.hasError('required') && productForm.get('name')?.touched">Debe ingresar el nombre del producto.</span> 
+                    </p>
+                </div>
+                <div class="col-4">
+                    <label>Referencia</label>
+                    <input type="text" type="text" formControlName="reference" class="form-control">
+                    <p>
+                        <span  *ngIf="productForm.get('reference')?.hasError('required') && productForm.get('reference')?.touched">Debe ingresar la referencia del producto.</span> 
+                    </p>
+                </div> 
+                <div class="col-4">
+                    <label>Marca</label>
+                    <input type="text" type="text" formControlName="brand" class="form-control">
+                    <p>
+                        <span  *ngIf="productForm.get('brand')?.hasError('required') && productForm.get('brand')?.touched">Debe ingresar la marca del producto.</span>                        
+                    </p>
+                </div> 
+                <div class="col-4">
+                    <label>Precio unidad</label>
+                    <input type="text" type="text" formControlName="unit_price" class="form-control">
+                    <p> <span  *ngIf="productForm.get('brand')?.hasError('required') && productForm.get('brand')?.touched">Debe ingresar el precio del producto.</span>                       
+                        <span *ngIf="productForm.get('unit_price')?.hasError('pattern')">Sólo se reciben números.</span>
+                        <span *ngIf="productForm.get('unit_price')?.hasError('min')">Número mayor que 1.</span>
+                    </p>
+                </div> 
+                <div class="col-4">
+                    <label>Image URL</label>
+                    <input type="text" type="text" formControlName="image_url" class="form-control">
+                    <p>
+                        <span  *ngIf="productForm.get('image_url')?.hasError('required') && productForm.get('image_url')?.touched">Debe ingresar la URL de la imagen del producto.</span>                         
+                    </p>
+                </div> 
+                <div class="col-4">
+                    <label>Inventario</label>
+                    <input type="text" type="text" formControlName="in_stock" class="form-control">
+                    <p>
+                        <span  *ngIf="productForm.get('in_stock')?.hasError('required') && productForm.get('in_stock')?.touched">Debe ingresar  las unidaades disponibles.</span> 
+                        <span *ngIf="productForm.get('in_stock')?.hasError('pattern')">Sólo se reciben números.</span>
+                        
+                    </p>
+                </div>
+                <div class="col-4">
+                    <label>Category</label>
+                    <input type="text" type="text" formControlName="category" class="form-control">
+                    <p>
+                        <span  *ngIf="productForm.get('category')?.hasError('required') && productForm.get('category')?.touched">Debe ingresar la categoría</span> 
+                        <span *ngIf="productForm.get('category')?.hasError('pattern')">Sólo se reciben letras.</span>
+                    </p>
+                </div>
+                <div class="col-4">
+                    <label>Descripción</label>
+                    <input type="text" type="text" formControlName="description" class="form-control">                                 
+                </div>               
+               
+                
+            </div>    
+            <div>
+                <button type="submit" class="form-btn col-4 offset-md-4" [disabled]="productForm.invalid">{{submitName}}</button>       
+            </div>                                  
+        </form>
+    </div>
+</div>
+

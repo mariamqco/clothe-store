@@ -1,0 +1,126 @@
+/* .sticky{
+    position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+}
+
+header{
+    height:18vh;
+    background-color: var(--color-a) ; 
+}
+
+.header-navbar{    
+    width: 100vw;   
+    display:flex;
+    justify-content: center;
+    background-color: var(--color-d);    
+}
+
+header .title{   
+    font-family: 'Cinzel Decorative', sanz-serif;
+    font-size: 10vh;
+    text-align: center;
+}
+.header-navbar .hnavbar-btn{    
+    padding: 1vh 1vw;    
+    background-color: var(--color-d);    
+    border: none;
+    color:var(--color-a);
+}
+
+header .header-navbar .hnavbar-btn:hover{
+    background-color: var(--color-c);
+    
+} */
+
+.header-container{
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 18px;
+    width: 100%;
+    background-color: var(--color-i);
+    color: var(--color-k);
+    position: fixed;
+    top:0;
+    z-index: 3;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;  
+    height: 10vh; 
+    z-index: 3;     
+    top: 0;
+    position:sticky;
+    position: -webkit-sticky;
+    background-color: var(--color-i);   	
+}
+
+header h1{
+    font-size: 3em;      
+}
+
+header h1 span{
+    color: var(--color-j);
+}
+
+
+nav {
+    padding-top: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 10vh; 
+    z-index: 3;   
+    top: 10vh;
+    position:sticky;
+    position: -webkit-sticky;
+    background-color: var(--color-i);
+    border-bottom: 2px var(--color-e) solid;    
+}
+
+nav ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center ;
+    padding: 0;   
+}
+
+nav ul li a{
+    color: var(--color-k);
+    padding: 0.5em 1.5em;
+    margin: 0.5em 0;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;   
+}
+
+nav ul li .active-a{
+    color: var(--color-k);
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 3px var(--color-j) solid;
+}
+
+nav ul li a:hover{
+    color: var(--color-k);   
+    border-bottom: 3px var(--color-j) solid;
+}
+
+
+
+
+
+

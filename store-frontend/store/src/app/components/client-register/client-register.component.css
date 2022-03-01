@@ -1,0 +1,65 @@
+
+.foryou-container{
+    width: 100vw;   
+    background-image: url("/assets/img/for-you-bg.jpg");
+    background-size: cover;    
+    position: absolute;
+    top:20vh;        
+}
+
+.info-section{
+    background-color: none;
+    width:100%;    
+    height: 80vh;    
+}
+.infoA p{
+  width: 40%;
+  color: var(--color-);
+  font-size: 5vh;  
+  text-align: center; 
+  font-weight: bold;  
+}
+
+.benefit-options{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 5vw;  
+    margin-left: 10vh;
+    margin-right: 10vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+.infoB p{
+    color: var(--color-a);
+    font-size: 3vh;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.infoB h2{
+    margin: 5vh;
+    width: 90%;
+    text-align: center; 
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2vh;    
+}
+
+.serv1{
+    background-color: rgb(48, 71, 94, 0.7);     
+    height: 30vh;
+}
+
+.serv2{
+    background-color: rgb(240, 84, 84, 0.7);     
+    height: 30vh;
+}
+
+.serv3{
+    background-color: rgb(14, 31, 49, 0.7);     
+    height: 30vh;
+}
+
+.infoC{
+    background-color: rgb(120, 147, 149, 0.4);
+}

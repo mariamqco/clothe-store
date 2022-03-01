@@ -1,0 +1,37 @@
+<app-admin-dashboard [title]="client_title" [subtitle]="client_subtitle"></app-admin-dashboard>
+
+<div class="admin-content">  
+  <div class="new-btn-container">
+    <button class="new-btn" routerLink="/admin-dashboard/clients-register-update">NUEVO</button>
+  </div>
+    <table class="table table-sm">
+        <thead>
+            <tr>
+              <th>Nombres</th>
+              <th>Apellidos</th>
+              <th>Identificación</th>
+              <th>Correo electrónico</th>
+              <th>Teléfono</th>
+              <th>Edad</th>
+              <th>Ocupación</th>
+              <th>Ciudad</th>
+              <th>Dirección</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let client of clients_list">
+              <td>{{client.name}}</td>
+              <td>{{client.lastname}}</td>
+              <td>{{client.id_number}}</td>
+              <td>{{client.email}}</td>
+              <td>{{client.cellphone}}</td>
+              <td>{{client.age}}</td>
+              <td>{{client.occupation}}</td>
+              <td>{{client.city}}</td>
+              <td>{{client.address}}</td>
+              <td><i [routerLink]="['/admin-dashboard/clients-register-update',client._id]"><img src="/assets/img/editar-documento.png" alt="edit" class="icon"></i></td>
+              <td><i (click)="deleteClient(client._id)"><img src="/assets/img/cross.png"  alt="edit" class="icon"></i></td>
+            </tr>            
+          </tbody>
+    </table>
+</div>

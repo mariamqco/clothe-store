@@ -1,0 +1,30 @@
+.content-container{    
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+}
+
+.content-container .client-form-container{
+    width: 90%;
+    padding: 2% ;
+    height: auto;
+    border: 2px solid var(--color-d);
+}
+
+.content-container .client-form-container input{    
+    border: 2px solid var(--color-d);
+}
+
+.form-text{
+    font-weight: bolder;
+    color: var(--color-d)
+}
+
+.form-btn{ 
+    margin-top: 3vh;   
+    background-color: var(--color-c);
+    color: #FFF;
+    padding:  1vh 3vh;
+    border: var(--color-d) 2px solid;
+    border-radius: 10px;    
+}

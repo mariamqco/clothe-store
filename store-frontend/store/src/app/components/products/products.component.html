@@ -1,0 +1,35 @@
+<app-admin-dashboard [title]="product_title" [subtitle]="product_subtitle"></app-admin-dashboard>
+
+<div class="admin-content">  
+    <div class="new-btn-container">
+      <button class="new-btn" routerLink="/admin-dashboard/products-register-update">NUEVO</button>
+    </div>
+      <table class="table table-sm">
+          <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Referencia</th>
+                <th>Marca</th>
+                <th>Precio C/U</th>
+                <th>imagen</th>
+                <th>Almacén</th>
+                <th>Descripción</th>
+                <th>Category</th>                
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of products_list">
+                <td>{{product.name}}</td>
+                <td>{{product.reference}}</td>
+                <td>{{product.brand}}</td>
+                <td>{{product.unit_price}}</td>
+                <td>{{product.image_url}}</td>
+                <td>{{product.in_stock}}</td>
+                <td>{{product.description}}</td>
+                <td>{{product.category}}</td>               
+                <td><i [routerLink]="['/admin-dashboard/products-register-update',product._id]"><img src="/assets/img/editar-documento.png" alt="edit" class="icon"></i></td>
+                <td><i (click)="deleteProduct(product._id)"><img src="/assets/img/cross.png"  alt="edit" class="icon"></i></td>
+              </tr>            
+            </tbody>
+      </table>
+  </div>

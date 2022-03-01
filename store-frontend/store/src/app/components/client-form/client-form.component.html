@@ -1,0 +1,71 @@
+<div class="content-container center">    
+    <div class="client-form-container">
+        <form [formGroup] = "clientForm" (ngSubmit)="clientFormSubmit()">
+            <div class="row">
+                <div class="col-6">
+                    <label>Nombres</label>
+                    <input type="text" formControlName="name" class="form-control">
+                    <p>
+                        <span  *ngIf="clientForm.get('name')?.hasError('required') && clientForm.get('name')?.touched">Debe ingresar su nombre.</span> 
+                        <span *ngIf="clientForm.get('name')?.hasError('pattern')">Sólo se reciben letras.</span>
+                    </p>
+                </div>
+                <div class="col-6">
+                    <label>Apellidos</label>
+                    <input type="text" type="text" formControlName="lastname" class="form-control">
+                    <p>
+                        <span  *ngIf="clientForm.get('lastname')?.hasError('required') && clientForm.get('lastname')?.touched">Debe ingresar su nombre.</span> 
+                        <span *ngIf="clientForm.get('lastname')?.hasError('pattern')">Sólo se reciben letras.</span>
+                    </p>
+                </div> 
+                <div class="col-3">
+                    <label>Identificación</label>
+                    <input type="text" type="text" formControlName="id_number" class="form-control">
+                    <p>
+                        <span  *ngIf="clientForm.get('id_number')?.hasError('required') && clientForm.get('id_number')?.touched">Debe ingresar su identificación.</span> 
+                        <span *ngIf="clientForm.get('id_number')?.hasError('pattern')">Sólo se reciben números.</span>
+                    </p>                    
+                </div>
+                <div class="col-6">
+                    <label>correo electrónico</label>
+                    <input type="email" formControlName="email" class="form-control">                    
+                    <p>
+                        <span *ngIf="clientForm.get('email')?.hasError('required') && clientForm.get('email')?.touched">Debe ingresar su correo electrónico.</span> 
+                        <span *ngIf="clientForm.get('email')?.hasError('pattern')">Formato de correo no válido.</span>
+                    </p> 
+                </div> 
+                <div class="col-3">
+                    <label>Teléfono</label>
+                    <input type="text" formControlName="cellphone" class="form-control">                    
+                    <p>
+                        <span  *ngIf="clientForm.get('cellphone')?.hasError('required') && clientForm.get('cellphone')?.touched">Debe ingresar su teléfono.</span> 
+                        <span *ngIf="clientForm.get('cellphone')?.hasError('pattern')">Sólo se reciben números.</span>
+                    </p>
+                </div> 
+            </div>    
+            <p class="form-text" >La siguiente información nos permitirá ofrecerte una experiencia más a tu medidad (opcional)</p>        
+            <div class="row">
+                <div class="col-1">
+                    <label>Edad</label>
+                    <input type="text" formControlName="age" class="form-control">
+                    <p *ngIf="clientForm.get('age')?.hasError('pattern')">Sólo se reciben números.</p>
+                </div> 
+                <div class="col-3">
+                    <label>Ocupación</label>
+                    <input type="text" formControlName="occupation" class="form-control">
+                    <p *ngIf="clientForm.get('lastnames')?.hasError('pattern')">Sólo se reciben letras.</p>
+                </div>  
+                <div class="col-3">
+                    <label>Ciudad</label>
+                    <input type="text" formControlName="city" class="form-control">
+                    <p *ngIf="clientForm.get('city')?.hasError('pattern')">Sólo se reciben letras.</p>
+                </div>    
+                <div class="col-5">
+                    <label>Dirección</label>
+                    <input type="text" formControlName="address" class="form-control">                    
+                </div>  
+                <button type="submit" class="form-btn col-4 offset-md-4" [disabled]="clientForm.invalid">{{submitName}}</button>       
+            </div>                                  
+        </form>
+    </div>
+</div>
