@@ -75,7 +75,11 @@ export class ClientFormComponent implements OnInit {
         } 
       }, error =>{
         console.log(error)
-        this.router.navigate(['/client-create']);   
+        Swal.fire(
+          'Hubo un error',
+          'Comuníquese con soporte',         
+        );
+        this.router.navigate(['/']);
       });
     }    
   }
@@ -113,14 +117,15 @@ export class ClientFormComponent implements OnInit {
           showConfirmButton: true,
           timer: 3000
         });
-      }
-      
-      console.log("cliente añadido");
-      console.log(clientData);
-      console.log(this.current_url);  
-          
+      }     
+               
     },error =>{
       console.log(error);
+      Swal.fire(
+        'Hubo un error',
+        'Comuníquese con soporte',         
+      );
+      this.router.navigate(['/']);
     });     
   }
 
@@ -150,6 +155,11 @@ export class ClientFormComponent implements OnInit {
         }
         , error =>{
           console.log(error)
+          Swal.fire(
+            'Hubo un error',
+            'Comuníquese con soporte',         
+          );
+          this.router.navigate(['/']);
         }
       );
     }      

@@ -16,7 +16,7 @@ export class ClientsComponent implements OnInit {
   clients_list: Client[];
   
 
-  constructor(private clientService: ClientService) { 
+  constructor(private clientService: ClientService, private router: Router) { 
     this.client_title = "CLIENTES"
     this.client_subtitle = "Lista de clientes"  
     this.clients_list = [];  
@@ -32,14 +32,12 @@ export class ClientsComponent implements OnInit {
       console.log(this.clients_list)
     }, error => {
       console.log(error);
-      Swal.fire({
-        position: 'top-end',
-        icon: 'error',
-        title: 'Lo sentimos',
-        text: 'Hubo un error. Comunícate con soporte',
-        showConfirmButton: false,
-        timer: 5000
-      });
+      Swal.fire(
+        'Hubo un error',
+        'Comuníquese con soporte',
+        'error'  
+      );
+      this.router.navigate(['/'])
     });
   }
 
@@ -65,9 +63,10 @@ export class ClientsComponent implements OnInit {
           error =>{
             console.log(error);
             Swal.fire(
-              'Operación fallida',          
-              'error'
+              'Hubo un error',
+              'Comuníquese con soporte',         
             );
+            this.router.navigate(['/']);
           });
         
       }
